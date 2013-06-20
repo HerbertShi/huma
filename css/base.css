@@ -116,7 +116,7 @@ a:hover{
 .header .nav .subNav {
 	display: none;
 	position: absolute;
-	z-index: 2;
+	z-index: 10;
 	margin-top: 10px;
 }
 .header .nav .subNav .subNavUnit {
@@ -127,6 +127,9 @@ a:hover{
 	line-height: 30px;
 	text-align: left;
 	color: #eee;
+}
+.header .nav .subNav a:hover, .header .nav .subNav a.active {
+	background: none;
 }
 .header .linkRoom {
 	float: right;
@@ -145,6 +148,7 @@ a:hover{
 	position: absolute;
 	height: 90px;
 	background: black;
+	z-index: 9;
 	width: 100%;
 	opacity: 0.3;  /*Opera9.0+、Firefox1.5+、Safari、Chrome*/
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; /*IE8*/
