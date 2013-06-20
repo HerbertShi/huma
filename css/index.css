@@ -43,6 +43,26 @@ body {
 	padding-top:290px;
 	color: #adadad;
 }
+.banner .wrap {
+	position: relative;
+}
+.banner .pre {
+	position: absolute;
+	cursor: pointer;
+	width: 42px;
+	height: 83px;
+	background: url(../images/slideIndexLeft.png) no-repeat;
+	z-index: 5;
+}
+.banner .next {
+	cursor: pointer;
+	position: absolute;
+	width: 42px;
+	height: 83px;
+	background: url(../images/slideIndexRight.png) no-repeat;
+	right: 5px;
+	z-index: 5;
+}
 .introNav{
 	background:url(../images/sub_menu_bg.png) repeat-x;	
 	height:27px;

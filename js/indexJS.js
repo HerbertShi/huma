@@ -1,6 +1,6 @@
 $(function() {
-	var $prevBackGround = $("<div><<<<</div>");
-	var $nextBackGround = $("<div>>>>></div>");
+	var $prevBackGround = $("<div class='pre'></div>");
+	var $nextBackGround = $("<div class='next'></div>");
 
 	var backGroundList = ["images/ad/banner_1.png", "images/ad/banner_2.png"];
 
@@ -44,11 +44,14 @@ $(function() {
 		}, 2000);
 	});
 
-	$("body").append($prevBackGround).append($nextBackGround);
+	$($(".banner>.wrap")[0]).append($prevBackGround).append($nextBackGround);
 
 	$(".nav li").hover(function() {
+		$(this).children(".navCover").show();
 		$(this).children(".subNav").show();
+
 	}, function() {
 		$(this).children(".subNav").hide();
+		$(this).children(".navCover").hide();
 	});
 });
