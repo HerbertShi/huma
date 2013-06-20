@@ -21,10 +21,14 @@
 				$(".nav .subNav").hide();
 				$(".navCover").hide();
 			});
-			$(".introNav a").hover(function(){
+
+			$(".introNav a").mouseenter(function() {
 				$(".introCont").fadeIn(500);
-			},function(){
-				$(".introCont").fadeOut(500);
+				
+			});
+
+			$(".introCont").mouseleave(function(){
+				$(".introCont").hide();
 			});
 		});
 	</script>
