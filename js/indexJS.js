@@ -53,4 +53,10 @@ $(function() {
 	});
 
 	$("body").append($prevBackGround).append($nextBackGround);
+
+	$(".nav li").hover(function() {
+		$(this).children(".subNav").show();
+	}, function() {
+		$(this).children(".subNav").hide();
+	});
 });
