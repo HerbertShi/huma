@@ -79,7 +79,6 @@ body {
 .introCont {
 	display: none;
 	background:url(../images/pop_sub_menu_bg.png) bottom repeat-x;
-	box-shadow:1px -5px 5px #151515;
 	min-height: 150px;
 }
 .introContLayout {
