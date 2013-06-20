@@ -39,33 +39,35 @@ $(function() {
 
 		var currentIndex = 0;
 
+		$($piclist.children(".slider-pic-element")[currentIndex]).fadeIn(500);
+		$($ullist.children(".slider-ul-element")[currentIndex]).addClass("active");
+
 		var activePicture = function() {
+			$piclist.children(".slider-pic-element").css("background-image", "url('" + $($piclist.children(".slider-pic-element")[currentIndex]).find("img").attr("src") + "')");
+
+			currentIndex++;
+			if (currentIndex >= imglist.length) {
+				currentIndex = 0;
+			}
+
 			$piclist.children(".slider-pic-element").hide();
-			$($piclist.children(".slider-pic-element")[currentIndex]).show();
+			$($piclist.children(".slider-pic-element")[currentIndex]).fadeIn(500);
+
 
 			$ullist.children(".slider-ul-element").removeClass("active");
 			$($ullist.children(".slider-ul-element")[currentIndex]).addClass("active");
 		};
 
-		activePicture();
 		var play = setInterval(function() {
-			currentIndex++;
-			if (currentIndex >= imglist.length) {
-				currentIndex = 0;
-			}
 			activePicture();
 		}, 5000);
 
 		$ullist.children(".slider-ul-element").hover(function() {
 			clearInterval(play);
-			currentIndex = $(this).index();
+			currentIndex = $(this).index() - 1;
 			activePicture();
 		}, function() {
 			play = setInterval(function() {
-				currentIndex++;
-				if (currentIndex >= imglist.length) {
-					currentIndex = 0;
-				}
 				activePicture();
 			}, 5000);
 		});
@@ -91,4 +93,9 @@ $(function() {
 		url: "#"
 	});
 	slider($("#slider"), _imglist, "slider");
+
+	setTimeout(function() {
+		$(".popupBg").height(Math.max($(window).height(), $(document).height()));
+		$(".popupBg").show();
+	}, 200);
 });
