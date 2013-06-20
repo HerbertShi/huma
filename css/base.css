@@ -1,0 +1,307 @@
+@charset "utf-8";
+/* common.css */
+@import url("reset.css");
+/* #Basic Styles
+================================================== */
+body {
+	background: #0b0b09;
+	font-family: "微软雅黑",'Segoe UI Symbol', Utopia, 'Times New Roman', Times, serif;
+	font-weight: normal;
+	font-size: 12px;
+	text-transform: none;
+	color: #e7e7e7;
+	line-height: 1.7em;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* #Links
+================================================== */
+a {
+	color: #990000;
+	text-transform: none;
+	
+}
+a:hover{
+	color: #660202;
+	text-decoration: underline;
+}
+/* #clear
+================================================== */
+.clear{
+	height:0px;
+	width:0px;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	clear:both;	
+}
+.clearfix:before,.clearfix:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	width: 0;
+}
+.clearfix{
+	zoom:1;	
+}
+/* #fonts
+================================================== */
+.red{color:#ef0000;}
+/* #bg
+================================================== */
+.gray_bg{
+
+}
+/* #btn
+================================================== */
+
+.btnBlack{
+	background:url(../images/btn_black.png) no-repeat;
+	width:90px;
+	height:23px;
+	line-height:25px;
+	display:inline-block;
+	text-align:center;
+	font-family:"幼圆";
+	font-size:12px;
+	color:#fff;	
+}
+.btnBlack:hover{
+	text-decoration:none;
+	color:#fff;	
+}
+
+/* #layout
+================================================== */
+.wrapper {
+	position: relative;
+}
+.wrap{
+	width:970px;
+	margin:0 auto;
+	padding:0px 0px;
+}
+/*header*/
+.header{
+	background:url(../images/headerInnerpage.png) repeat-x;
+	height: 48px;
+	line-height: 45px;
+	color:#5b5b5b;
+	font-size:14px;
+}
+.header .logo{
+	float: left;
+	margin-top: 5px;
+}
+.header .nav {
+	float: right;
+}
+.header .nav li{
+	float:left;	
+}
+.header .nav li a{
+	color:#808080;	
+	width: 132px;
+	display: block;
+	height: 100%;
+	text-align: center;
+}
+.header .nav li a:hover, .header .nav li a.active{
+	background:url(../images/navAcitveInnerpage.png) center no-repeat;
+	color: #986400;
+}
+.header .nav .subNav {
+	display: none;
+	position: absolute;
+	z-index: 2;
+	margin-top: 10px;
+}
+.header .nav .subNav .subNavUnit {
+	float: left;
+}
+.header .nav .subNav .subNavUnit a {
+	height: 30px;
+	line-height: 30px;
+	text-align: left;
+	color: #eee;
+}
+.header .linkRoom {
+	float: right;
+	margin-top: 5px;
+}
+.header .linkRoom a {
+	margin-left: 5px;
+	display: block;
+	width: 49px;
+	height: 32px;
+	display: inline-block;
+	line-height: 32px;
+}
+.navCover {
+	display: none;
+	position: absolute;
+	height: 90px;
+	background: black;
+	width: 100%;
+	opacity: 0.3;  /*Opera9.0+、Firefox1.5+、Safari、Chrome*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; /*IE8*/
+}
+.footer {
+	background:url(../images/headerInnerpage.png) repeat-x;
+	height: 43px;
+	font-size: 10px;
+}
+.footer .logo, .footer .contactInfo, .footer .companyInfo {
+	float: left;
+	margin-right: 50px;
+}
+.footer .logo {
+	background:url(../images/footerInnerpageEm.png) repeat-x;
+	height: 43px;
+	text-align: center;
+	padding: 0 5px;
+}
+.footer .logo img{
+	margin-top: 7px;
+}
+.footer .companyInfo {
+	line-height: 17px;
+	margin-top: 5px;
+}
+.footer .contactInfo div{
+	display: inline-block;
+	margin-right: 20px;
+	line-height: 43px;
+}
+.footer .contactInfo .tel {
+	background:url(../images/telWhite.png) left center no-repeat;
+	padding-left: 20px;
+}
+.footer .contactInfo .mail {
+	background:url(../images/mailWhite.png) left center no-repeat;
+	padding-left: 20px;
+}
+.footer .returnTop {
+	background:url(../images/footerInnerpageEm.png) repeat-x;
+	height: 43px;
+	text-align: center;
+	float: right;
+	width: 40px;
+}
+.footer .returnTop img{
+	margin-top: 7px;
+}
+/* main container Styles
+================================================== */
+.main {
+	background: #0b0b09 url(../images/innerpageMain.png) left -700px repeat-x;
+	color: #444444;
+}
+.asideBrown {
+	width: 150px;
+	background: #231a16 url(../images/asideBrownBg.png) left top repeat-x;
+	padding-bottom: 20px;
+}
+.asideBrown .logo {
+	margin: 20px 10px;
+} 
+.asideBrown .title {
+	margin: 0 10px 10px;
+}
+.asideBrown .menuMain{
+	margin: 0 10px 10px;
+	
+}
+.asideBrown .menuMain a {
+	color: #727171;
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	background: transparent url(../images/asideBrownLine.png) left bottom repeat-x;
+}
+.asideBrown .menuMain a.active, .asideBrown .menuMain a:hover {
+	color: #e54e24;
+}
+.asideBrown .submenu {
+	display: none;
+	background: #110d0b;
+	padding: 10px;
+}
+.asideBrown .submenu a {
+	background: none;
+	height: 20px;
+	line-height: 20px;
+}
+/* overlay Styles
+================================================== */
+.column_1{
+	width: 302px;
+}
+
+.margin_1{
+	margin-top:10px;	
+}
+.align_center {
+	text-align: center;
+}
+.align_right {
+	text-align: right;
+}
+.align_left {
+	text-align: left;
+}
+.fr{
+	float:right;	
+}
+.fl{
+	float:left;	
+}
+/* pagination Styles
+================================================== */
+.pagination {
+	margin: 20px auto;
+	width: 535px;
+}
+.pagination a.num {
+	width: 25px;
+	height: 26px;
+	line-height: 26px;
+	color: #fff;
+	text-align: center;
+	display: inline-block;
+	margin: 19px  10px 0 10px;
+}
+.pagination a.active {
+	background: transparent url(../images/pagingActive.png) center no-repeat;
+}
+.pagination div {
+	float: left;
+	height: 62px;
+}
+.pagination div a{
+	display: inline-block;
+	margin-top: 11px;
+	height: 43px;
+	width: 43px;
+}
+.pagination .pre{
+	padding: 0 10px;
+	background: transparent url(../images/pagingPreBg.png) left top no-repeat;
+}
+
+.pagination .pre a {
+	background: transparent url(../images/pagingPreBtn.png) center no-repeat;
+}
+.pagination .next{
+	padding: 0 10px;
+	background: transparent url(../images/pagingNextBg.png) right top no-repeat;
+}
+.pagination .next a {
+	background: transparent url(../images/pagingNextBtn.png) center no-repeat;
+}
+.pagination .pagingCont {
+	background: transparent url(../images/pagingBg.png) center repeat-x;
+}

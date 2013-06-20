@@ -1,0 +1,154 @@
+@import url("base.css");
+body {
+	background: #000;
+}
+
+/* #layout special for index
+================================================== */
+.header{
+	height:84px;
+	line-height:84px;
+	background:url(../images/top_bg.png) repeat-x;
+}
+.header .logo{
+	float: left;
+	margin-top: 23px;
+}
+.header .linkRoom {
+	float: right;
+	margin-top: -7px;
+}
+.header .linkRoom a {
+	margin-left: 5px;
+	background:url(../images/btn_gray.png) no-repeat;
+	width:50px;
+	height:33px;
+	line-height:33px;
+	display:inline-block;
+	text-align:center;
+	text-decoration:none;
+}
+.header .nav li a{
+	color:#5b5b5b;	
+}
+.header .linkRoom a img{
+	vertical-align:middle;
+	margin-top:7px;
+}
+.banner{
+	background:url(../images/ad/banner_1.png) center -40px no-repeat;
+	padding-top:290px;
+}
+.introNav{
+	background:url(../images/sub_menu_bg.png) repeat-x;	
+	height:27px;
+	line-height:27px;
+	color:#e7e7e7;
+}
+.introNav li{float:left;width:33%;text-align:center;}
+.introNav a{
+	color:#e7e7e7;	
+}
+.introNav a:hover{
+	text-decoration:none;
+}
+.introCont {
+	background:url(../images/pop_sub_menu_bg.png) bottom repeat-x;
+	box-shadow:1px -5px 5px #151515;
+}
+.introCont .introContRoom {
+	float: left;
+	padding: 20px;
+}
+.introCont .introContRoom dd{
+	margin-left: 30px;
+	padding-left: 15px;
+}
+.introCont .center {
+	border: 1px solid #fff;
+	border-top: none;
+	border-bottom: none;
+	width: 45%;
+}
+.introCont .center img {
+	float: left;
+	width: 150px;
+	margin-right: 20px;
+}
+.introCont .center div {
+	float: left;
+	width: 250px;
+}
+.introCont .center a {
+	display: block;
+	color: #fff;
+}
+.introCont .right li{
+	float: left;
+	padding-right: 20px;
+}
+.introCont .right a {
+	display: block;
+	padding: 5px 0;
+	color: #fff;
+}
+/*footer*/
+.footerIndex{	
+	height:55px;
+	color:#0e0e0e;
+	font-size:12px;
+	position:relative;	
+	overflow:hidden;
+	padding-top:10px;
+}
+.footerIndex .companyInfo{
+	margin-top:10px;
+	float: left;	
+} 
+.footerIndex .companyInfo div{
+	line-height:20px;	
+}
+.footerIndex .companyInfo .copyright{
+	background:url(../images/brown_bg.png) left 2px repeat-x;
+	height:12px;
+	line-height:12px;
+	font-size:10px;
+	color:#bfb3b2;
+	text-rendering:optimizelegibility; 
+	padding:0px 2px;
+	width:auto;
+}
+.footerIndex .contactInfo{
+	width:280px;
+	text-align:right;
+	font-size:14px;
+	float: right;
+}
+.footerIndex .contactInfo .fl{
+	margin-top:10px;	
+}
+.footerIndex .contactInfo .fr{
+	width:175px;	
+}
+.footerIndex .contactInfo .fr a{
+	color:#0e0e0e;
+}
+.footerIndex dl{
+	clear:both;
+
+}
+.footerIndex dt,.footerIndex dd{
+	float:left;	
+	height:23px;
+	line-height:23px;
+}
+.footerIndex dt{
+	width:34px;
+	text-align:center;
+}
+.footerIndex dd{
+	text-align:right;
+	width:140px;
+	font-size:bold;
+}
+.footerIndex img{vertical-align:middle;}

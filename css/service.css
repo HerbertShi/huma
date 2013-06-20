@@ -1,0 +1,152 @@
+@import url("base.css");
+.main .contianer{
+	margin: 0px;
+	background: transparent url(../images/ad/serviceBg.png) center -35px no-repeat;
+}
+.pagination {
+	margin: 0 auto;
+}
+.serviceMain .wrap {
+		position: relative;
+}
+.serviceMain .banner {
+	padding: 15px 0;
+	height: 377px;
+	background: transparent url(../images/ad/serviceBanner01.png) center no-repeat;
+}
+.serviceMain .menubar {
+	position: absolute;
+	left: -155px;
+}
+.breadcrumb {
+	background: url(../images/breadcrumbBg.png) left top repeat-x;
+	height: 43px;
+	color: #4d3a15;
+	font-size: 16px;
+	line-height: 43px;
+	padding-left: 10px;
+	box-shadow: 1px 1px 7px #333; 
+	margin-bottom: 15px;
+}
+.breadcrumb span {
+	background: url(../images/breadcrumbMore.png) left top no-repeat;
+	margin: 13px 10px 0 0;
+	width: 20px;
+	height: 17px;
+	float: right;
+	display: block;
+}
+.serviceMain .contUnit {
+	float: left;
+	margin-bottom: 20px;
+}
+.serviceMain .contUnit dt{
+	background: #fff;
+	height: 30px;
+	line-height: 30px;
+	width: 290px;
+	padding-left: 10px;
+}
+.serviceMain .contUnit dd img{
+	width: 300px;
+}
+.serviceMain .contUnit.center {
+	margin: auto 35px;
+}
+
+.serviceMain .menuMain span{
+	background: url(../images/asideBrownEx.png) left top repeat-x;
+	width: 14px;
+	height: 15px;
+	display: block;
+	float: right;
+	margin-top: 10px;
+}
+/* introduce page
+================================================== */
+.introduceMain .breadcrumb {
+	margin: 0px;
+	border-bottom: 1px solid #5b492d;
+}
+.introduceMain .leftMenu {
+	float: left;
+}
+.introduceMain .leftMenu a {
+	color: #3b3b3b;
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 15px;
+	background: url(../images/introduceMenuBg.png) left bottom repeat-x;
+}
+.introduceMain .leftMenu .active, .introduceMain .leftMenu a:hover {
+	color: #5a0b01;
+}
+.introduceMain .leftMenu ul {
+	margin-bottom: 20px;
+	background: #dfdfdf;
+}
+ .focus {
+	padding: 20px;
+	background: #dfdfdf;
+}
+.introduceMain .menuCont{
+	float: right;
+	width: 640px;
+	margin-bottom: 20px;
+}
+
+.breadcrumbWhite {
+	padding-left: 15px;
+	height: 40px;
+	line-height: 40px;
+	background: url(../images/breadcrumbWhiteBg.png) left bottom repeat-x;
+}
+.breadcrumbWhite span {
+	width: 12px;
+	height: 17px;
+	float: left;
+	margin-top: 12px;
+	padding-right: 10px;
+	background: url(../images/posIcon.png) no-repeat;
+
+}
+.introduceMain .menuContConatianer {
+	background: url(../images/opacityWhite.png) left top repeat;
+	padding: 10px;
+
+}
+.introduceMain .menuContConatianer .controom {
+	padding: 15px;
+	background: #fff;
+	min-height: 500px;
+}
+.introduceMain .menuContConatianer .controom .logo {
+	float: right;
+}
+.introduceMain .menuContConatianer .title {
+	color: #5a0b01;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 20px 0 40px 0;
+}
+.introduceMain .menuContConatianer h2, .introduceMain .menuContConatianer h3 {
+	color: #c86700;
+}
+.introduceMain .menuContConatianer h2 {
+	font-size: 28px;
+	margin-bottom:  20px;
+}
+.introduceMain .menuContConatianer h3 {
+	font-size: 16px;
+	height: 25px;
+	line-height: 25px;
+	margin: 10px 0;
+}
+.introduceMain .menuContConatianer h3 span {
+	display: inline-block;
+	background: #444;
+	color: #fff;
+	font-size: 12px;
+	padding: 0 5px;
+}

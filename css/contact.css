@@ -1,0 +1,60 @@
+@import url("base.css");
+.main .contianer{
+	background: transparent url(../images/ad/contactBg.png) center -35px no-repeat;
+/*	height: 900px;*/
+}
+
+.main .contianer img {
+	text-align: left;
+}
+/* culture page
+================================================== */
+.cultureMain .banner {
+	background: transparent url(../images/cultureBg.png) center -35px no-repeat;
+	height: 350px;
+}
+.cultureMain .menubar {
+	float: left;
+	margin-right: 15px;
+}
+
+.cultureMain .menuCont {
+	float: left;
+	width: 650px;
+	background: white;
+	padding: 10px 10px 0 10px;
+}
+.cultureMain .menuCont .contTitle {
+	border-bottom: 1px solid #b6b6b6;
+	height: 35px;
+	line-height: 35px;
+	font-size: 16px;
+	color: #3d1b05;
+}
+.cultureMain .menuCont .contTitle span {
+	color: #3d1b05;
+	display: inline-block;
+	border-bottom: 3px solid #aa3e22;
+}
+.cultureMain .menuCont .contUnit {
+	padding: 15px 0;
+	border-bottom: 1px dashed #dcdcdc;
+}
+.cultureMain .menuCont .contUnit dt {
+	margin-bottom: 10px;
+}
+.cultureMain .menuCont .contUnit label{
+	font-size: 14px;
+	color: #651e0a;
+}
+.cultureMain .menuCont .contUnit span{
+	float: right;
+}
+.cultureMain .menuCont .contUnit dd a {
+	display: block;
+	float: right;
+	background: #3d1b05;
+	color: #fff;
+	padding: 3px 15px;
+}
+
