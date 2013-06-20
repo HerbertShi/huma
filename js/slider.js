@@ -96,6 +96,5 @@ $(function() {
 
 	setTimeout(function() {
 		$(".popupBg").height(Math.max($(window).height(), $(document).height()));
-		$(".popupBg").show();
 	}, 200);
 });
