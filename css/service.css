@@ -62,6 +62,10 @@
 	float: right;
 	margin-top: 10px;
 }
+
+.serviceMain .menuMain span.active{
+	background: url(../images/asideBrownCol.png) left top repeat-x;
+}
 /* introduce page
 ================================================== */
 .introduceMain .breadcrumb {
@@ -215,4 +219,9 @@
 }
 .popupRoom .btnRoom .next {
 	float: right;
+}
+
+/***********************************************/
+.slider-pic-element{
+	display: none;
 }

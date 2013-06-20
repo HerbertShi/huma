@@ -4,6 +4,20 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>联系我们</title>
 	<link href="css/contact.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".nav li").hover(function() {
+				if ($(this).children(".subNav").size() > 0) {
+					$(".navCover").show();
+				}
+				$(this).children(".subNav").show();
+			}, function() {
+				$(this).children(".subNav").hide();
+				$(".navCover").hide();
+			});
+		});
+	</script>
 </head>
 
 <body>

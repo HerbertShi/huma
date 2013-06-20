@@ -4,16 +4,54 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>产品与服务</title>
 	<link href="css/service.css" rel="stylesheet" type="text/css" />
-	<style type="text/css">
-		.slider-pic-element{
-			display: none;
-		}
-		.ullist .active{
-			color:red;
-		}
-	</style>
 	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
 	<script type="text/javascript" src="js/slider.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			var _imglist = [];
+			_imglist.push({
+				img: "images/ad/serviceBanner01.png",
+				title: "1",
+				url: "#"
+			});
+			_imglist.push({
+				img: "images/ad/serviceBanner02.png",
+				title: "1",
+				url: "#"
+			});
+			_imglist.push({
+				img: "images/ad/serviceBanner03.png",
+				title: "1",
+				url: "#"
+			});
+			slider($("#slider"), _imglist, "slider");
+
+			$(".nav li").hover(function() {
+				if ($(this).children(".subNav").size() > 0) {
+					$(".navCover").show();
+				}
+				$(this).children(".subNav").show();
+			}, function() {
+				$(this).children(".subNav").hide();
+				$(".navCover").hide();
+			});
+
+			setTimeout(function() {
+				$(".popupBg").height(Math.max($(window).height(), $(document).height()));
+			}, 200);
+
+			$(".menuMain").children("li").children("a").click(function() {
+					$(".menuMain").children("li").children("a").children("span").removeClass("active");
+				if ($(this).next(".submenu").css("display") != "none") {
+					$(".menuMain").find(".submenu").slideUp(500);
+				} else {
+					$(".menuMain").find(".submenu").slideUp(500);
+					$(this).next(".submenu").slideDown(500);
+					$(this).children("span").addClass("active");
+				}
+			});
+		});
+	</script>
 </head>
 <body>
 	<div class="wrapper">

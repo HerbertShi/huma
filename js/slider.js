@@ -21,89 +21,53 @@ objClass为增加给图片轮播对象的class
 	}
 </style>
 **************************************/
+var slider = function($obj, imglist, objClass) {
+	$obj.empty();
+	var $piclist = $("<div class=\"piclist\"></div>");
+	var $ullist = $("<ul class=\"ullist\"></ul>");
+	var imgTemplate = "<a href=\"{{url}}\"><img width=\"" + $obj.width() + "\" height=\"" + $obj.height() + "\" src=\"{{img}}\" title=\"{{title}}\" alt=\"{{title}}\" /></a>"
+	$(imglist).each(function(index) {
+		$piclist.append("<div class=\"slider-pic-element\">" + imgTemplate.replace(/\{\{img\}\}/g, this.img).replace(/\{\{title\}\}/g, this.title).replace(/\{\{url\}\}/g, this.url) + "</div>");
+		// $ullist.append("<li class=\"slider-ul-element\">" + (index + 1) + "</li>");
+		$ullist.append("<li class=\"slider-ul-element\">" + "</li>");
+	});
+	$ullist.append("<div style=\"clear:both;\"></div>");
 
+	var currentIndex = 0;
 
+	$($piclist.children(".slider-pic-element")[currentIndex]).fadeIn(500);
+	$($ullist.children(".slider-ul-element")[currentIndex]).addClass("active");
 
-$(function() {
-	var slider = function($obj, imglist, objClass) {
-		$obj.empty();
-		var $piclist = $("<div class=\"piclist\"></div>");
-		var $ullist = $("<ul class=\"ullist\"></ul>");
-		var imgTemplate = "<a href=\"{{url}}\"><img width=\"" + $obj.width() + "\" height=\"" + $obj.height() + "\" src=\"{{img}}\" title=\"{{title}}\" alt=\"{{title}}\" /></a>"
-		$(imglist).each(function(index) {
-			$piclist.append("<div class=\"slider-pic-element\">" + imgTemplate.replace(/\{\{img\}\}/g, this.img).replace(/\{\{title\}\}/g, this.title).replace(/\{\{url\}\}/g, this.url) + "</div>");
-			// $ullist.append("<li class=\"slider-ul-element\">" + (index + 1) + "</li>");
-			$ullist.append("<li class=\"slider-ul-element\">" + "</li>");
-		});
-		$ullist.append("<div style=\"clear:both;\"></div>");
+	var activePicture = function() {
+		$piclist.children(".slider-pic-element").css("background-image", "url('" + $($piclist.children(".slider-pic-element")[currentIndex]).find("img").attr("src") + "')");
 
-		var currentIndex = 0;
+		currentIndex++;
+		if (currentIndex >= imglist.length) {
+			currentIndex = 0;
+		}
 
+		$piclist.children(".slider-pic-element").hide();
 		$($piclist.children(".slider-pic-element")[currentIndex]).fadeIn(500);
+
+
+		$ullist.children(".slider-ul-element").removeClass("active");
 		$($ullist.children(".slider-ul-element")[currentIndex]).addClass("active");
-
-		var activePicture = function() {
-			$piclist.children(".slider-pic-element").css("background-image", "url('" + $($piclist.children(".slider-pic-element")[currentIndex]).find("img").attr("src") + "')");
-
-			currentIndex++;
-			if (currentIndex >= imglist.length) {
-				currentIndex = 0;
-			}
-
-			$piclist.children(".slider-pic-element").hide();
-			$($piclist.children(".slider-pic-element")[currentIndex]).fadeIn(500);
-
-
-			$ullist.children(".slider-ul-element").removeClass("active");
-			$($ullist.children(".slider-ul-element")[currentIndex]).addClass("active");
-		};
-
-		var play = setInterval(function() {
-			activePicture();
-		}, 5000);
-
-		$ullist.children(".slider-ul-element").hover(function() {
-			clearInterval(play);
-			currentIndex = $(this).index() - 1;
-			activePicture();
-		}, function() {
-			play = setInterval(function() {
-				activePicture();
-			}, 5000);
-		});
-
-		$obj.append($piclist).append($ullist);
-		$obj.addClass(objClass);
 	};
 
-	var _imglist = [];
-	_imglist.push({
-		img: "images/ad/serviceBanner01.png",
-		title: "1",
-		url: "#"
-	});
-	_imglist.push({
-		img: "images/ad/serviceBanner02.png",
-		title: "1",
-		url: "#"
-	});
-	_imglist.push({
-		img: "images/ad/serviceBanner03.png",
-		title: "1",
-		url: "#"
-	});
-	slider($("#slider"), _imglist, "slider");
+	var play = setInterval(function() {
+		activePicture();
+	}, 5000);
 
-	setTimeout(function() {
-		$(".popupBg").height(Math.max($(window).height(), $(document).height()));
-	}, 200);
-
-	$(".menuMain").children("li").children("a").click(function() {
-		if ($(this).next(".submenu").css("display") != "none") {
-			$(".menuMain").find(".submenu").slideUp(500);
-		} else {
-			$(".menuMain").find(".submenu").slideUp(500);
-			$(this).next(".submenu").slideDown(500);
-		}
+	$ullist.children(".slider-ul-element").hover(function() {
+		clearInterval(play);
+		currentIndex = $(this).index() - 1;
+		activePicture();
+	}, function() {
+		play = setInterval(function() {
+			activePicture();
+		}, 5000);
 	});
-});
+
+	$obj.append($piclist).append($ullist);
+	$obj.addClass(objClass);
+};
