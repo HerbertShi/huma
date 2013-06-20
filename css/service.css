@@ -150,3 +150,69 @@
 	font-size: 12px;
 	padding: 0 5px;
 }
+
+/* introduce page
+================================================== */
+.popupBg {
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background: #000;
+	opacity: 0.7;  /*Opera9.0+、Firefox1.5+、Safari、Chrome*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; /*IE8*/
+}
+.popupRoom {
+	display: none;
+	position: absolute;
+	top: 50px;
+	left: 30%;
+	height: 620px;
+	width: 550px;
+	background: #666874;
+	padding: 15px;
+}
+.popupRoom .title {
+	background: #3E3F4C;
+	color: #9a9899;
+	font-size: 18px;
+	height: 40px;
+	width: 535px;
+	line-height: 40px;
+	padding-left: 15px;
+} 
+.popupRoom .close {
+	background: url(../images/popClose.png) no-repeat;
+	display: block;
+	width: 47px;
+	height: 46px;
+	position: absolute;
+	right: -13px;
+	top: -16px;
+}
+.popupRoom .download {
+	background: url(../images/popDownload.png) no-repeat;
+	display: block;
+	width: 108px;
+	height: 43px;
+	position: absolute;
+	bottom: 70px;
+	left: 25px;
+}
+.popupRoom .btnRoom {
+	margin: 15px 0;
+}
+.popupRoom .btnRoom a {
+	display: block;
+	padding: 2px 15px;
+	background: #3E3F4C;
+	color: #fff;
+}
+.popupRoom .btnRoom .back {
+	float: left;
+}
+.popupRoom .btnRoom .next {
+	float: right;
+}

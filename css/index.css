@@ -31,6 +31,9 @@ body {
 .header .nav li a{
 	color:#5b5b5b;	
 }
+.header .nav li a:hover, .header .nav li a.active {
+	background:url(../images/navActiveIndex.png) center 65px no-repeat;
+}
 .header .linkRoom a img{
 	vertical-align:middle;
 	margin-top:7px;
@@ -38,6 +41,7 @@ body {
 .banner{
 	background:url(../images/ad/banner_1.png) center -40px no-repeat;
 	padding-top:290px;
+	color: #adadad;
 }
 .introNav{
 	background:url(../images/sub_menu_bg.png) repeat-x;	
@@ -53,15 +57,24 @@ body {
 	text-decoration:none;
 }
 .introCont {
+	display: none;
 	background:url(../images/pop_sub_menu_bg.png) bottom repeat-x;
 	box-shadow:1px -5px 5px #151515;
+	min-height: 150px;
+}
+.introContLayout {
+	min-height: 150px;
 }
 .introCont .introContRoom {
 	float: left;
 	padding: 20px;
 }
+
 .introCont .introContRoom dd{
-	margin-left: 30px;
+	margin-left: 20px;
+}
+.introCont .introContRoom dd div {
+	background:url(../images/arrowLeft.png) left center no-repeat;
 	padding-left: 15px;
 }
 .introCont .center {
@@ -81,7 +94,8 @@ body {
 }
 .introCont .center a {
 	display: block;
-	color: #fff;
+	color: #adadad;
+
 }
 .introCont .right li{
 	float: left;
@@ -89,8 +103,8 @@ body {
 }
 .introCont .right a {
 	display: block;
-	padding: 5px 0;
-	color: #fff;
+	padding: 1px 0;
+	color: #adadad;
 }
 /*footer*/
 .footerIndex{	
