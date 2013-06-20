@@ -304,3 +304,24 @@ a:hover{
 .pagination .pagingCont {
 	background: transparent url(../images/pagingBg.png) center repeat-x;
 }
+/* slider Styles
+================================================== */
+.slider {
+	position: relative;
+}
+.slider .ullist {
+	position: absolute;
+	bottom: 22px;
+	right: 3px;
+}
+.slider .ullist li {
+	float: left;
+	height: 8px;
+	width: 8px;
+	background: #fff;
+	border: 2px solid #fff;
+	margin-right: 5px;
+}
+.slider .ullist li.active {
+	background: #ae702a;
+}

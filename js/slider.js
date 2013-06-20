@@ -32,9 +32,10 @@ $(function() {
 		var imgTemplate = "<a href=\"{{url}}\"><img width=\"" + $obj.width() + "\" height=\"" + $obj.height() + "\" src=\"{{img}}\" title=\"{{title}}\" alt=\"{{title}}\" /></a>"
 		$(imglist).each(function(index) {
 			$piclist.append("<div class=\"slider-pic-element\">" + imgTemplate.replace(/\{\{img\}\}/g, this.img).replace(/\{\{title\}\}/g, this.title).replace(/\{\{url\}\}/g, this.url) + "</div>");
-			$ullist.append("<li class=\"slider-ul-element\">" + (index + 1) + "</li>");
+			// $ullist.append("<li class=\"slider-ul-element\">" + (index + 1) + "</li>");
+			$ullist.append("<li class=\"slider-ul-element\">" + "</li>");
 		});
-		$ullist.append("<li style=\"clear:both;\"></li>");
+		$ullist.append("<div style=\"clear:both;\"></div>");
 
 		var currentIndex = 0;
 
@@ -53,7 +54,7 @@ $(function() {
 				currentIndex = 0;
 			}
 			activePicture();
-		}, 1000);
+		}, 5000);
 
 		$ullist.children(".slider-ul-element").hover(function() {
 			clearInterval(play);
@@ -66,7 +67,7 @@ $(function() {
 					currentIndex = 0;
 				}
 				activePicture();
-			}, 1000);
+			}, 5000);
 		});
 
 		$obj.append($piclist).append($ullist);
@@ -80,12 +81,12 @@ $(function() {
 		url: "#"
 	});
 	_imglist.push({
-		img: "images/ad/serviceBanner01.png",
+		img: "images/ad/serviceBanner02.png",
 		title: "1",
 		url: "#"
 	});
 	_imglist.push({
-		img: "images/ad/serviceBanner01.png",
+		img: "images/ad/serviceBanner03.png",
 		title: "1",
 		url: "#"
 	});
