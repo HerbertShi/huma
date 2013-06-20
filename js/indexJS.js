@@ -32,11 +32,7 @@ $(function() {
 		clearInterval(play);
 	}, function() {
 		play = setInterval(function() {
-			currentIndex++;
-			if (currentIndex >= backGroundList.length) {
-				currentIndex = 0;
-			}
-			activePicture();
+			activePicture(1);
 		}, 2000);
 	});
 
@@ -44,11 +40,7 @@ $(function() {
 		clearInterval(play);
 	}, function() {
 		play = setInterval(function() {
-			currentIndex++;
-			if (currentIndex >= backGroundList.length) {
-				currentIndex = 0;
-			}
-			activePicture();
+			activePicture(1);
 		}, 2000);
 	});
 
