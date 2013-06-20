@@ -26,13 +26,17 @@
 			});
 			slider($("#slider"), _imglist, "slider");
 
-			$(".nav li").hover(function() {
+			$(".nav li").mouseenter(function() {
+				$(".nav .subNav").hide();
+				$(".navCover").hide();
 				if ($(this).children(".subNav").size() > 0) {
 					$(".navCover").show();
 				}
 				$(this).children(".subNav").show();
-			}, function() {
-				$(this).children(".subNav").hide();
+			});
+
+			$(".navCover").mouseout(function(){
+				$(".nav .subNav").hide();
 				$(".navCover").hide();
 			});
 
@@ -49,6 +53,16 @@
 					$(this).next(".submenu").slideDown(500);
 					$(this).children("span").addClass("active");
 				}
+			});
+
+			$(".contUnit").click(function(){
+				$(".popupBg").show();
+				$(".popupRoom").show();
+			});
+
+			$(".close").click(function(){
+				$(".popupRoom").hide();
+				$(".popupBg").hide();
 			});
 		});
 	</script>

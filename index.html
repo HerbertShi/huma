@@ -8,13 +8,17 @@
 	<script type="text/javascript" src="js/indexJS.js"></script>
 	<script type="text/javascript">
 		$(function(){
-			$(".nav li").hover(function() {
+			$(".nav li").mouseenter(function() {
+				$(".nav .subNav").hide();
+				$(".navCover").hide();
 				if ($(this).children(".subNav").size() > 0) {
 					$(".navCover").show();
 				}
 				$(this).children(".subNav").show();
-			}, function() {
-				$(this).children(".subNav").hide();
+			});
+
+			$(".navCover").mouseout(function(){
+				$(".nav .subNav").hide();
 				$(".navCover").hide();
 			});
 		});
