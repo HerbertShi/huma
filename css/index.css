@@ -86,7 +86,7 @@ body {
 }
 .introCont .introContRoom {
 	float: left;
-	padding: 20px;
+	padding: 20px 30px;
 }
 
 .introCont .introContRoom dd{
@@ -100,7 +100,7 @@ body {
 	border: 1px solid #fff;
 	border-top: none;
 	border-bottom: none;
-	width: 45%;
+	width: 40%;
 }
 .introCont .center img {
 	float: left;
@@ -109,7 +109,7 @@ body {
 }
 .introCont .center div {
 	float: left;
-	width: 250px;
+	width: 217px;
 }
 .introCont .center a {
 	display: block;
