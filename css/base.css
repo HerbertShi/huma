@@ -228,6 +228,7 @@ a:hover{
 .asideBrown .submenu {
 	background: #110d0b;
 	padding: 10px;
+	display: none;
 }
 .asideBrown .submenu a {
 	background: none;

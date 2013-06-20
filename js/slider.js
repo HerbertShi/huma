@@ -97,4 +97,13 @@ $(function() {
 	setTimeout(function() {
 		$(".popupBg").height(Math.max($(window).height(), $(document).height()));
 	}, 200);
+
+	$(".menuMain").children("li").children("a").click(function() {
+		if ($(this).next(".submenu").css("display") != "none") {
+			$(".menuMain").find(".submenu").slideUp(500);
+		} else {
+			$(".menuMain").find(".submenu").slideUp(500);
+			$(this).next(".submenu").slideDown(500);
+		}
+	});
 });

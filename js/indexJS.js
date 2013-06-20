@@ -47,11 +47,12 @@ $(function() {
 	$($(".banner>.wrap")[0]).append($prevBackGround).append($nextBackGround);
 
 	$(".nav li").hover(function() {
-		$(this).children(".navCover").show();
+		if ($(this).children(".subNav").size() > 0) {
+			$(".navCover").show();
+		}
 		$(this).children(".subNav").show();
-
 	}, function() {
 		$(this).children(".subNav").hide();
-		$(this).children(".navCover").hide();
+		$(".navCover").hide();
 	});
 });
