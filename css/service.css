@@ -36,22 +36,30 @@
 	float: right;
 	display: block;
 }
-.serviceMain .contUnit {
+.serviceMain .contUnit li{
 	float: left;
+	padding: 0 10px;
 	margin-bottom: 20px;
 }
-.serviceMain .contUnit dt{
+.serviceMain .contUnit li span{
+	display: block;
 	background: #fff;
 	height: 30px;
 	line-height: 30px;
 	width: 290px;
 	padding-left: 10px;
 }
-.serviceMain .contUnit dd img{
+.serviceMain .contUnit li img{
 	width: 300px;
 }
-.serviceMain .contUnit.center {
-	margin: auto 35px;
+a.download {
+	background: url(../images/popDownload.png) no-repeat;
+	display: block;
+	width: 108px;
+	height: 43px;
+	position: absolute;
+	bottom: 2px;
+	left: 25px;
 }
 
 .serviceMain .menuMain span{

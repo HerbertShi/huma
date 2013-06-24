@@ -4,7 +4,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>产品与服务</title>
 	<link href="css/service.css" rel="stylesheet" type="text/css" />
+	<link href="css/jquery.lightbox-0.5.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.lightbox-0.5.js"></script>
 	<script type="text/javascript" src="js/slider.js"></script>
 	<script type="text/javascript">
 		$(function() {
@@ -55,17 +57,18 @@
 				}
 			});
 
-			$(".contUnit").click(function(){
-				$(".popupBg").show();
-				$(".popupRoom").show();
-			});
+			// $(".contUnit").click(function(){
+			// 	$(".popupBg").show();
+			// 	$(".popupRoom").show();
+			// });
 
-			$(".close").click(function(){
-				$(".popupRoom").hide();
-				$(".popupBg").hide();
-			});
+			// $(".close").click(function(){
+			// 	$(".popupRoom").hide();
+			// 	$(".popupBg").hide();
+			// });
 		});
 	</script>
+
 </head>
 <body>
 	<div class="wrapper">
@@ -159,46 +162,66 @@
 							</ul>
 						</div>
 					</div>
-					<div class="menuCont">
+					<div class="menuCont" id="gallery">
 						<div class="breadcrumb">首页 > 产品与服务 > 法国<span></span></div>
-						<dl class="contUnit">
-							<dt>阿尔萨科古堡干红</dt>
-							<dd>
-								<img src="images/ad/product01.png" />
-							</dd>
-						</dl>
-
-						<dl class="contUnit center">
-							<dt>阿隆索干红</dt>
-							<dd>
-								<img src="images/ad/product02.png" />
-							</dd>
-						</dl>
-						<dl class="contUnit">
-							<dt>奥非利古堡干红</dt>
-							<dd>
-								<img src="images/ad/product03.png" />
-							</dd>
-						</dl>
-						<dl class="contUnit">
-							<dt>奥非利古堡干红2</dt>
-							<dd>
-								<img src="images/ad/product04.png" />
-							</dd>
-						</dl>
-						<dl class="contUnit center">
-							<dt>澳尼干白</dt>
-							<dd>
-								<img src="images/ad/product05.png" />
-							</dd>
-						</dl>
-						<dl class="contUnit">
-							<dt>澳尼干红</dt>
-							<dd>
-								<img src="images/ad/product06.png" />
-							</dd>
-						</dl>
-						<div class="clear"></div>
+					 	<ul class="contUnit">
+					 		<li>
+					 			<span class="imgT">阿尔萨科古堡干红</span>
+					 			<div class="Img_box">
+					 				<a href='images/ad/proPop.png' class='lightbox' rel='flowers' title='[field:title/]' >
+					 					<img src='images/ad/product01.png'  border='0'/>					 	
+					 				</a>
+					 			</div>
+					 			<div></div>
+					 		</li>
+					 		<li>
+					 			<span class="imgT">阿尔萨科古堡干红</span>
+					 			<div class="Img_box">
+					 				<a href='images/ad/proPop.png' class='lightbox' rel='flowers' title='[field:title/]' >
+					 					<img src='images/ad/product01.png'  border='0'/>					 	
+					 				</a>
+					 			</div>
+					 			<div></div>
+					 		</li>
+					 		<li>
+					 			<span class="imgT">阿尔萨科古堡干红</span>
+					 			<div class="Img_box">
+					 				<a href='images/ad/proPop.png' class='lightbox' rel='flowers' title='[field:title/]' >
+					 					<img src='images/ad/product01.png'  border='0'/>					
+					 				</a>
+					 			</div>
+					 			<div></div>
+					 		</li>
+					 		<li>
+					 			<span class="imgT">阿尔萨科古堡干红</span>
+					 			<div class="Img_box">
+					 				<a href='images/ad/proPop.png' class='lightbox' rel='flowers' title='[field:title/]' >
+					 					<img src='images/ad/product01.png'  border='0'/>					 	
+					 				</a>
+					 			</div>
+					 			<div></div>
+					 		</li>
+					 		<li>
+					 			<span class="imgT">阿尔萨科古堡干红</span>
+					 			<div class="Img_box">
+					 				<a href='images/ad/proPop.png' class='lightbox' rel='flowers' title='[field:title/]' >
+					 					<img src='images/ad/product01.png'  border='0'/>					 	
+					 				</a>
+					 			</div>
+					 			<div></div>
+					 		</li>
+					 		<li>
+					 			<span class="imgT">阿尔萨科古堡干红</span>
+					 			<div class="Img_box">
+					 				<a href='images/ad/proPop.png' class='lightbox' rel='flowers' title='[field:title/]' >
+					 					<img src='images/ad/product01.png'  border='0'/>					 	
+					 				</a>
+					 			</div>
+					 			<div></div>
+					 		</li>
+					 		<div class="clear"></div>
+					 	</ul>
+						
 					</div>
 					
 					<div class="pagination">
@@ -245,19 +268,11 @@
 		</div>
 		<!--footer end-->
 	</div>
-<!-- popup -->
-<div class="popupBg"></div>
-<div class="popupRoom">
-	<div class="popupContainer">
-		<a href="#" class="close"></a>
-		<div class="title">阿尔萨科古堡干红</div>
-		<IMG SRC="images/ad/proPop.png">
-		<A HREF="#" class="download"></A>
-		<div class="btnRoom">
-			<a href="#" class="back">&lt; BACK</a>
-			<a href="#" class="next">NEXT &gt;</a>
-		</div>
-	</div>
-</div>
+	<script type="text/javascript">
+		$('#gallery a').lightBox({
+			imageBtnClose:  "images/lightbox-btn-close.gif"
+		});
+
+	</script>
 </body>
 </html>
